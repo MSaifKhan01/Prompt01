@@ -1,5 +1,7 @@
 // const openai = require('openai');
 const express = require('express');
+
+require('dotenv').config();
 const OpenAIRouter = express.Router()
 
 
@@ -8,7 +10,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 
 
 
-API_KEY="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"
+const API_KEY=process.env.API_KEY
 
 
 OpenAIRouter.post("/get", async (req, res) => {

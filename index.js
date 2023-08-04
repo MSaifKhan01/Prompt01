@@ -8,8 +8,12 @@ app.use(express.json())
 
 app.use("/openai",OpenAIRouter)
 
+
+
 app.listen(4001,async()=>{
     try {
+
+        
         console.log("connected")
     } catch (error) {
         console.log(error)

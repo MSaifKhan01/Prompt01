@@ -34,7 +34,7 @@ OpenAIRouter.post("/get", async (req, res) => {
         const data = await response.json()
         console.log(data)
         let result = data.choices[0].message.content
-        res.send(result)
+        res.send({data:result})
     } catch (error) {
         res.status(400).send({ "msg": error.message })
     }

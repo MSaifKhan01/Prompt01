@@ -10,7 +10,7 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 
 
 
-const API_KEY=process.env.API_KEY
+// const API_KEY=process.env.API_KEY
 
 
 OpenAIRouter.post("/get", async (req, res) => {
@@ -18,7 +18,7 @@ OpenAIRouter.post("/get", async (req, res) => {
     const options = {
         method: "POST",
         headers: {
-            "Authorization": `Bearer ${API_KEY}`,
+            "Authorization": `Bearer ${process.env.API_KEY}`,
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
